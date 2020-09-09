@@ -1,11 +1,11 @@
 # Site settings
 author: Nick Nobile
-title: 
+title: Algo's Rhythm's
 header-img: img/home-bg.png
 email: nickcnobile@gmail.com
 copyright_name: Nick Nobile
 description: > # this means to ignore newlines until "baseurl:"
-  
+  The story of one man's journey to learn, decipher, and manipulate code
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  nnobile
