@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Sinatra Portfolio Project: SneakerCloset"
-date:       2021-01-01 20:14:09 +0000
+date:       2021-01-01 15:14:10 -0500
 permalink:  sinatra_portfolio_project_sneakercloset
 ---
 
