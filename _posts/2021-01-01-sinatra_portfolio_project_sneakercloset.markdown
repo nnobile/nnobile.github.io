@@ -5,6 +5,7 @@ date:       2021-01-01 15:14:10 -0500
 permalink:  sinatra_portfolio_project_sneakercloset
 ---
 
+![](https://lapoesiedelobjet.tumblr.com/image/71852590917)
 
 Being that Frank Sinatra is legitimately one of my favorite musicians of all time, I was excited to dive head first into our next module. Over the past few months I've been learning more about the underlying connections between Users and databases, how to create forms for data entry, how to manipulate that data, and how browsers and servers talk to each other. 
 
