@@ -5,7 +5,7 @@ date:       2021-01-01 15:14:10 -0500
 permalink:  sinatra_portfolio_project_sneakercloset
 ---
 
-Being that Frank Sinatra is legitimately one of my favorite musicians of all time (*That's Life* is my go-to karaoke song) I was quite excited to dive head first into our next module and learn about the Sinatra framework. Over the past few months I've been learning more about the underlying connections between Users and databases, how to create forms for data entry, how to manipulate that data, and how browsers and servers talk to each other. 
+Being that Frank Sinatra is legitimately one of my favorite musicians of all time (*That's Life* is my go-to karaoke song) I was excited to dive head first into our next module and learn about the Sinatra framework. Over the past few months I've been learning more about the underlying connections between Users and databases, how to create forms for data entry, how to manipulate that data, and how browsers and servers talk to each other. 
 
 Two major components of both the curriculum and this project are ActiveRecord and Sinatra. In the previous CLI project, we didn't focus too much on how the API was queried, but rather how you could connect to it and access data. This project was more involved in developing code to create database tables, write requests to query them, develop forms, and create a user-facing web application will full C.R.U.D functionality.
 
