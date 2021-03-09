@@ -62,6 +62,8 @@ irb> User.create(username: nil).valid?
 It's important to note that any new object saved to the database will not report errors even if it's technically invalid. Validations are automatically run only when the object is saved to the database (via the create or save methods).
 
 
+
+
 ***Why do we use render after a failed attempt to create an object?***
 
 
