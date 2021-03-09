@@ -6,9 +6,9 @@ permalink:  methods_that_trigger_model_validations_and_render_vs_redirect
 ---
 
 
+
 ***Which methods will trigger model validations to run?
 ***
-
 Validating data is one of the most important parts of building functional web apps, as it ensures that the data being persisted to the database is valid and useful. We want to avoid situations where we allow for invalid data to be persisted to our database which can cause confusion down the road. For example, in my Rails project, all users (Opticians) must provide a username and an email address. Not only am I validating for the presence of these attributes, but I'm also validating for the uniqueness so that no two users with the same username can be created. THis may seem like pretty standard stuff, but it's very important nonetheless.
 
 ```
