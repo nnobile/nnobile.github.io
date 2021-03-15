@@ -43,10 +43,8 @@ Outside of the methods listed above, you can also run the validations on your ow
 It's important to note that any new object saved to the database will not report errors, even if it's technically invalid.
 
 
-
-
-***Why do we use render after a failed attempt to create an object?***
-
+***Why do we use render after a failed attempt to create an object?
+***
 
 Redirection and rendering are important parts to building functional web applications. When to use each of them can get complicated and it's important to understand the differences and use cases for each.
 
