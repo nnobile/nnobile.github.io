@@ -38,7 +38,6 @@ The difference between the bang and non-bang method versions above is that the b
 Before saving an Active Record object, Rails will run the validation checks and in the event that the validation produces errors, Rails will not save the object.
 
 Outside of the methods listed above, you can also run the validations on your own. If no errors were found in the object, calling `.valid?` will return the boolean value `true`. Otherwise, it will return false.
-```
 
 It's important to note that any new object saved to the database will not report errors, even if it's technically invalid.
 
@@ -68,4 +67,3 @@ In the above example, if we are able to successfully save a new patient object t
 However, with `render`, we still hold onto the @patient instance variable data defined in the `create` action (because for whatever reason we were not able to `save` the patient object). That's why for actions like create and update, where we are instantiating or editing data, there may be situations in which we want to maintain access to the information stored in the params. Say for example a form submission does not go through, we still want to have access to the attributes that were valid on submission (versus wiping the entire form and needing to start from scratch -- a poor user experience). The instance variable holds on to the object which gives us access to our errors.
 
 In short, `render` tells rails which view or asset to show a user, without losing access to any instance variables defined in the controller action. Redirect (or `redirect_to`) tells the browser to send a request to another URL and since the request is completely different, the view to which you redirect won't have access to any instance variables defined in the controller.
-
