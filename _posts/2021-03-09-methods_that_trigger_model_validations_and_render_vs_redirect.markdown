@@ -10,7 +10,7 @@ permalink:  methods_that_trigger_model_validations_and_render_vs_redirect
 ***Which methods will trigger model validations to run?***
 
 
-Validating data is one of the most important parts of building functional web apps, as it ensures that the data being persisted to the database is valid and useful. We want to avoid situations where we allow for invalid data to be persisted to our database which can cause confusion down the road. For example, in my Rails project, all users (Opticians) must provide a `:username` and an `:email`. Not only am I validating for the presence of these attributes, but I'm also validating for the uniqueness so that no two users with the same username can be created. This may seem like pretty standard stuff, but it's very important nonetheless.
+Validating data is one of the most important parts of building functional web apps, as it ensures that the data being persisted to the database is valid and useful. We want to avoid situations where we allow for invalid data to be persisted to our database which can cause confusion down the road. For example, in my Rails project, all users (Opticians) must provide a `:username` and an `:email`. Not only am I validating for the presence of these attributes, but I'm also validating for uniqueness, so that no two users with the same username can be created. This may seem like pretty standard stuff, but it's very important nonetheless.
 
 ```
 class Optician < ApplicationRecord
@@ -37,10 +37,10 @@ The difference between the bang and non-bang method versions above is that the b
 
 Before saving an Active Record object, Rails will run the validation checks and in the event that the validation produces errors, Rails will not save the object.
 
-Outside of the methods listed above, you can also run the validations on your own. If no errors were found in the object, `.valid?` will return the boolean value `true`. Otherwise, it will return false.
+Outside of the methods listed above, you can also run the validations on your own. If no errors were found in the object, calling `.valid?` will return the boolean value `true`. Otherwise, it will return false.
 ```
 
-It's important to note that any new object saved to the database will not report errors even if it's technically invalid.
+It's important to note that any new object saved to the database will not report errors, even if it's technically invalid.
 
 
 
