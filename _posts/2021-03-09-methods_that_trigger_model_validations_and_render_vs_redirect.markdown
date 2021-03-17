@@ -45,7 +45,7 @@ Outside of the methods listed above, you can also run the validations on your ow
 
 Redirection and rendering are important parts to building functional web applications. When to use each of them can get complicated and it's important to understand the differences and use cases for each.
 
-At a high-level, we use `redirect` when we want to send a GET request and hit an entirely new action. However, using `redirect` is not always necessary. In some cases, we can simply `render` a new view.
+At a high-level, we use `redirect` when we want to send a GET request and hit an entirely new action. However, using `redirect` is not always necessary and you could simply use `render`. In other words, you should not make the browser need to make a fresh call unless you really have to. Always question when you are using `redirect_to` and if it is the right thing, or perhaps a `render` would be better.
 
 When a user or site visitor is redirected, the application treats this as a brand new HTTP request. Since the web application is now responding to a new HTTP request, we no longer have access to instance variable data defined in the controller. Take the following `create` action outlined below for example.
 
