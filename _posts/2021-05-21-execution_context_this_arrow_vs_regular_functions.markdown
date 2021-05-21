@@ -98,7 +98,7 @@ Here, we are defining the `function`, but what if we use an arrow function (=>) 
 const user = {
 firstName: "John",
 lastName: "Doe",
-fullname: () **=>** {
+fullname: () => {
 	console.log(this);
 	console.log(`${this.firstName} ${this.lastName}`);
 	}
