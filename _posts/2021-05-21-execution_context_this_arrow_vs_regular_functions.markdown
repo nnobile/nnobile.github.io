@@ -8,7 +8,7 @@ permalink:  execution_context_this_arrow_vs_regular_functions
 
 **Execution Context**
 
-In order to talk about the concept of execution context, I am going to reference my` index.js` document as part of my JavaScript portfolio project as an example (see below):
+In order to talk about the concept of execution context, I am going to reference my `index.js` document that is part of my JavaScript portfolio project as an example (see below):
 
 
 ```document.addEventListener('DOMContentLoaded', () => {
@@ -41,11 +41,11 @@ function createFormHandler(event) {
 
 The above will get loaded into the HTML page. The moment that this gets opened, an execution context opens for the entire document.
 
-The first pass of the interpreter is going to look through the code and will realize that there is a `function` called `createFormHandler`. 
+The first pass of the interpreter is going to look through the code and recognize that there is a `function` called `createFormHandler`. 
 
-In the second pass, the interpreter will recognize `document.addEventListener('DOMContentLoaded'`). Nothing else happens until the `DOMContentLoaded` event fires, at which point the anonymous arrow function on line 1 is called (we will get more into arrow functions later). 
+In the second pass, the interpreter will recognize `document.addEventListener('DOMContentLoaded'`). Nothing else happens until the `DOMContentLoaded` event fires, at which point the anonymous arrow function on line 1 is called (we will get more into arrow functions later).
 
-Within these curly braces following the arrow function, a whole new execution context is opened. Keep in mind, we are still within the original document execution context too! So there is an executinoo context, within an execution context.
+Within these curly braces following the arrow function, a whole new execution context is opened. Keep in mind, we are still within the original document execution context too! So there is an execution context, within an execution context.
 
 Now, this "second" execution context has it's own two passes as well. The first thing the interpreter will recognize is that there is a `const createHeadphoneForm` variable. During the first pass, JavaScript will set the `createHeadphoneForm` variable to `undefined`. Then, during the second pass, the interpreter will go back to the top of the execution context and execute the code. So it will execute line 2, line 3, and then on line 5 `createHeadphoneForm` gets converted from `undefined` to an `element`. Then, line 7 is executed (which is also an event listener).
 
@@ -53,7 +53,6 @@ In general, once a function is done, it's execution context is packed up and the
 
 
 **Value of `this`**
-
 
 What is `this` in JavaScript? It is the object that is executing the current function.
 
@@ -63,7 +62,7 @@ What about in a standard function? `this` again refers to the global object wind
 
 Outside of the function, `this` still refers to the global window object.
 
-An easy way to remember what `this` refers to is to look at the line where the function is called or method is called. See example below.
+An easy way to remember what `this` refers to, is to look at the line where the function is called or method is called. See example below.
 
 ```
 const user = {
@@ -110,7 +109,7 @@ It's important to understand how arrow functions (=>) work, along with when to u
 
 In this instance, we will ***not*** want to use an arrow function because arrow functions always bind to the global object.
 
-This time, in our first console log, we get the window object. In our second console log we get undefined. 
+This time, in our first console log, we get the window object. In our second console log we get `undefined`. 
 
 Now, let's add an array of pets within the user object and then a new method to list each pet.
 
