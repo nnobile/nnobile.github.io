@@ -47,7 +47,7 @@ In the second pass, the interpreter will recognize `document.addEventListener('D
 
 Within these curly braces following the arrow function, a whole new execution context is opened. Keep in mind, we are still within the original document execution context too! So there is an execution context, within an execution context.
 
-Now, this "second" execution context has it's own two passes as well. The first thing the interpreter will recognize is that there is a `const createHeadphoneForm` variable. During the first pass, JavaScript will set the `createHeadphoneForm` variable to `undefined`. Then, during the second pass, the interpreter will go back to the top of the execution context and execute the code. So it will execute line 2, line 3, and then on line 5 `createHeadphoneForm` gets converted from `undefined` to an `element`. Then, line 7 is executed (which is also an event listener).
+Now, this "second" execution context has it's own two passes as well. The first thing the interpreter will recognize is that there is a `const createHeadphoneForm` variable. During the first pass, JavaScript will recognize the `createHeadphoneForm` variable, but it is important to note that the variable is uninitialized during this first pass. Then, during the second pass, the interpreter will go back to the top of the execution context and execute the code, starting with line 2.
 
 In general, once a function is done, it's execution context is packed up and the memory space that it was given is reallocated efficiently.
 
@@ -106,8 +106,6 @@ fullname: () => {
 ```
 
 It's important to understand how arrow functions (=>) work, along with when to use them and when not to use them.
-
-In this instance, we will ***not*** want to use an arrow function because arrow functions always bind to the global object.
 
 This time, in our first console log, we get the window object. In our second console log we get `undefined`. 
 
@@ -169,4 +167,6 @@ Arrow functions, HAVE to be anonymous (in other words, they have no name).
 
 They are useful for instances in which you want to create a function within a function, but not overwrite "`this`".
 
-A potential drawback of using too many arrow functions is that even if they are assigned to named variables, if you come across an error and need to do a stack trace, the error message you will receive will be akin to "there is an error in anonymous function, called by anonymous fucntion, within anonymous function", which can lead to confusion. That's why it's important to understand the different use cases for arrow functions and when it's best to use named functions vs. when to use arrow functions.
+It's important to note that arrow functions always inherit the value of '`this`' lexically, which means from the scope in which they are defined. In other words, `this` in an arrow function has the same value as the context in which the arrow function was created. Sometimes that will be the global object, but that's not always the case. For example, an instance method defined in a class as an arrow function will inherit the `this` value to be the instance of the class (not the global object).
+
+A potential drawback of using too many arrow functions to be aware of is that even if they are assigned to named variables, if you come across an error and need to do a stack trace, the error message you will receive will be akin to "there is an error in anonymous function, called by anonymous fucntion, within anonymous function", which can lead to confusion. That's why it's important to understand the different use cases for arrow functions and when it's best to use named functions vs. when to use arrow functions.
