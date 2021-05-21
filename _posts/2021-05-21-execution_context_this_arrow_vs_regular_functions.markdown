@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "Execution context, `this`, arrow  (`=>`) vs. regular functions"
-date:       2021-05-21 16:10:47 +0000
+title:      "Execution context, this keyword, arrow (=>) vs. regular functions"
+date:       2021-05-21 12:10:47 -0400
 permalink:  execution_context_this_arrow_vs_regular_functions
 ---
 
@@ -145,13 +145,12 @@ class Headphone {
 In the constructor, `this` does not have a value. The value of `this` will become the new object **once it has been created**.
 
 
-
 **More on Arrow functions vs. Regular functions**
 
 A `function` in JavaScript is a grouping of reusable code. If you use the `function` keyword, you can give the function a name. For example, 
 
 ```
-***function*** createFormHandler(event) {
+function createFormHandler(event) {
     event.preventDefault()
     const brandInput = document.querySelector('#input-brand').value
     const modelInput = document.querySelector('#input-model').value
