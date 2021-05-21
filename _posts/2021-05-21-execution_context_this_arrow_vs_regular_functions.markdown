@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "Execution context, this keyword, arrow (=>) vs. regular functions"
+title:      "Execution context, "this" keyword, & arrow (=>) vs. regular functions"
 date:       2021-05-21 12:10:47 -0400
 permalink:  execution_context_this_arrow_vs_regular_functions
 ---
